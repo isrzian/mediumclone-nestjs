@@ -1,6 +1,6 @@
 import { ConnectionOptions } from 'typeorm';
 
-export const config: ConnectionOptions = {
+const config: ConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
@@ -8,7 +8,7 @@ export const config: ConnectionOptions = {
   password: '123',
   database: 'mediumclone',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
-  synchronize: true,
+  synchronize: false,
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
   cli: {
     migrationsDir: 'src/migrations',
