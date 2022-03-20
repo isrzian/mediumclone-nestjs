@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { TagModule } from './tag/tag.module';
 import { UserModule } from './user/user.module';
 import { AuthMiddleware } from './user/middlewares/auth.middleware';
+import { ArticleModule } from "./article/article.module";
 
 const config = require('./ormconfig');
 
@@ -12,7 +13,8 @@ const config = require('./ormconfig');
   imports: [
     TypeOrmModule.forRoot(config),
     TagModule,
-    UserModule
+    UserModule,
+    ArticleModule
   ],
   controllers: [AppController],
   providers: [AppService],
