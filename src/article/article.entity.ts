@@ -41,6 +41,6 @@ export class ArticleEntity {
     this.updatedAt = new Date();
   }
 
-  @ManyToOne(() => UserEntity, (user) => user.id)
+  @ManyToOne(() => UserEntity, (user) => user.articles)
   author: UserEntity;
 }
